@@ -1,0 +1,47 @@
+[server]
+port=4747
+statusupdate=15000
+logfile=server.log
+name="My Cockatrice server"
+id=1
+number_pools=1
+
+[servernetwork]
+active=0
+port=14747
+ssl_cert=ssl_cert.pem
+ssl_key=ssl_key.pem
+
+[authentication]
+method=none
+
+[database]
+type=none
+prefix=cockatrice
+hostname=localhost
+database=servatrice
+user=servatrice
+password=foobar
+
+[rooms]
+method=config
+roomlist\size=1
+roomlist\1\name="General room"
+roomlist\1\description="Play anything here."
+roomlist\1\autojoin=true
+roomlist\1\joinmessage="This message is only here to show that rooms can have a join message."
+roomlist\1\game_types\size=3
+roomlist\1\game_types\1\name="GameType1"
+roomlist\1\game_types\2\name="GameType2"
+roomlist\1\game_types\3\name="GameType3"
+
+[game]
+max_game_inactivity_time=120
+max_player_inactivity_time=15
+
+[security]
+max_users_per_address=4
+message_counting_interval=10
+max_message_size_per_interval=1000
+max_message_count_per_interval=10
+max_games_per_user=5
